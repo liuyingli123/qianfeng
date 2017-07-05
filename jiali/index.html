@@ -1,0 +1,680 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>嘉丽专柜</title>
+<link href="css/public.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/my.js"></script>
+<script type="text/javascript" src="js/koala.min.1.5.js"></script>
+</head>
+<body>
+
+
+<!---顶部--->
+<div class="top">
+	<div class="margin">
+    	<div class="top_left">
+       		<a href=""><img src="images/icon01.png"></a>
+            <a href="" class="WeChat"><img src="images/icon02.png">
+            	<div class="WeChatnr"><img src="images/pic4.jpg"></div>
+            </a>
+            <a href=""><img src="images/icon03.png"></a>
+        </div>
+        <div class="top_right">
+        	<span><img src="images/icon04.png">
+            	<div class="login_in">
+                	<div class="login_innr">
+                    	<i><a href="login.html">用户登录</a></i>
+                        <i class="zhuce"><a href="">用户注册</a></i>
+                    </div>
+                </div>
+            </span>
+        	<a href="">关于嘉丽</a>
+            <a href="">投资者关系</a>
+            <a href="">新闻中心</a>
+            <a href="">大宗采购</a>
+            <a href="">加入嘉丽</a>
+            <a href="">联系我们</a>
+        </div>
+    </div>
+</div>
+<!---导航--->
+<div class="nav margin clear">
+	<div class="logo"><a href=""><img src="images/logo.png"/></a></div>
+    <div class="nav_ct">
+    	<ul>
+        	<li><a href="">电视</a></li>
+            <li><a href="">手机</a></li>
+            <li><a href="">冰洗</a></li>
+            <li><a href="">生活电器</a></li>
+            <li><a href="">大宗采购</a></li>
+            <li><a href="">服务</a></li>
+            <li><a href="">社区</a></li>
+        </ul>
+    </div>
+    <div class="nav_rt clear">
+    	<input type="text" class="search" placeholder="电视"/>
+        <input class="search_btn" value="" type="submit">
+      <div class="topbar_cart">购物车 0件
+        	<div id="cartsm" class="cartsm">您购物车中有0件商品</div>
+        </div>
+    </div>
+</div>
+<!---banner--->
+<div class="conent">
+    <div class="banner"> 
+    	<div id="fsD1" class="focus">  
+    <div id="D1pic1" class="fPic">  
+        <div class="fcon" style="display:block;">
+            <a  href=""><img src="images/banner2.jpg"></a>
+        </div>
+        
+        <div class="fcon" style="display:block;">
+            <a  href=""><img src="images/banner1.jpg"></a>
+            
+        </div>
+        
+        <div class="fcon" style="display: block;">
+            <a  href=""><img src="images/banner2.jpg"></a>
+           
+        </div>
+        
+        <div class="fcon" style="display: block;">
+            <a  href=""><img src="images/banner1.jpg"></a>            
+        </div>    
+    </div>
+    <div class="fbg">  
+    <div class="D1fBt" id="D1fBt">  
+        <a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i>1</i></a>  
+        <a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i>2</i></a>  
+        <a href="javascript:void(0)" hidefocus="true" target="_self" class="current"><i>3</i></a>  
+        <a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i>4</i></a>  
+    </div>  
+    </div>  
+    <span class="prev"></span>   
+    <span class="next"></span>    
+</div> 
+	    <script type="text/javascript">
+            Qfast.add('widgets', { path: "js/terminator2.2.min.js", type: "js", requires: ['fx'] });  
+            Qfast(false, 'widgets', function () {
+                K.tabs({
+                    id: 'fsD1',   //焦点图包裹id  
+                    conId: "D1pic1",  //** 大图域包裹id  
+                    tabId:"D1fBt",  
+                    tabTn:"a",
+                    conCn: '.fcon', //** 大图域配置class       
+                    auto: 1,   //自动播放 1或0
+                    effect: 'fade',   //效果配置
+                    eType: 'click', //** 鼠标事件
+                    pageBt:true,//是否有按钮切换页码
+                    bns: ['.prev', '.next'],//** 前后按钮配置class                          
+                    interval: 3000  //** 停顿时间  
+                }) 
+            })  
+        </script>          
+    	<div class="banner_in margin">       
+    		<div class="banner_wd ">
+    		<div class="sideNav">
+            	<ul>
+                	<li><i><img src="images/1.png"></i><a href="">电视</a>
+                    	<div class="subnva">
+                        	<a href="">
+                                <img src="images/8.png">
+                                <span>OLED电视</span>
+                            </a>
+                            <a href="">
+                                <img src="images/9.png">
+                                <span>曲面电视</span>
+                            </a>
+                            <a href="">
+                                <img src="images/10.png">
+                                <span>4k电视</span>
+                            </a>
+                            <a href="">
+                                <img src="images/11.png">
+                                <span>智能电视</span>
+                            </a>
+                            <a href="">
+                                <img src="images/12.png">
+                                <span>LED电视</span>
+                            </a>
+                            <a href="">
+                                <img src="images/9.png">
+                                <span>OLED电视</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li><i><img src="images/2.png"></i><a href="">冰箱</a>
+                    	<div class="subnva">
+                        	<a href="">
+                                <img src="images/8.png">
+                                <span>OLED电视</span>
+                            </a>
+                            <a href="">
+                                <img src="images/9.png">
+                                <span>曲面电视</span>
+                            </a>
+                            <a href="">
+                                <img src="images/10.png">
+                                <span>4k电视</span>
+                            </a>
+                            <a href="">
+                                <img src="images/11.png">
+                                <span>智能电视</span>
+                            </a>
+                            <a href="">
+                                <img src="images/12.png">
+                                <span>LED电视</span>
+                            </a>
+                            <a href="">
+                                <img src="images/9.png">
+                                <span>OLED电视</span>
+                            </a>
+                        </div>
+                    
+                    </li>
+                    <li><i><img src="images/3.png"></i><a href="">洗衣机</a>
+                    	<div class="subnva">
+                        	<a href="">
+                                <img src="images/8.png">
+                                <span>OLED电视</span>
+                            </a>
+                            <a href="">
+                                <img src="images/9.png">
+                                <span>曲面电视</span>
+                            </a>
+                            <a href="">
+                                <img src="images/10.png">
+                                <span>4k电视</span>
+                            </a>
+                            <a href="">
+                                <img src="images/11.png">
+                                <span>智能电视</span>
+                            </a>
+                            <a href="">
+                                <img src="images/12.png">
+                                <span>LED电视</span>
+                            </a>
+                            <a href="">
+                                <img src="images/9.png">
+                                <span>OLED电视</span>
+                            </a>
+                        </div>
+                    
+                    </li>
+                    <li><i><img src="images/4.png"></i><a href="">手机</a>
+                    	<div class="subnva">
+                        	<a href="">
+                                <img src="images/8.png">
+                                <span>OLED电视</span>
+                            </a>
+                            <a href="">
+                                <img src="images/9.png">
+                                <span>曲面电视</span>
+                            </a>
+                            <a href="">
+                                <img src="images/10.png">
+                                <span>4k电视</span>
+                            </a>
+                            <a href="">
+                                <img src="images/11.png">
+                                <span>智能电视</span>
+                            </a>
+                            <a href="">
+                                <img src="images/12.png">
+                                <span>LED电视</span>
+                            </a>
+                            <a href="">
+                                <img src="images/9.png">
+                                <span>OLED电视</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li><i><img src="images/5.png"></i><a href="">手机</a>
+                    	<div class="subnva">
+                        	<a href="">
+                                <img src="images/8.png">
+                                <span>OLED电视</span>
+                            </a>
+                            <a href="">
+                                <img src="images/9.png">
+                                <span>曲面电视</span>
+                            </a>
+                            <a href="">
+                                <img src="images/10.png">
+                                <span>4k电视</span>
+                            </a>
+                            <a href="">
+                                <img src="images/11.png">
+                                <span>智能电视</span>
+                            </a>
+                            <a href="">
+                                <img src="images/12.png">
+                                <span>LED电视</span>
+                            </a>
+                            <a href="">
+                                <img src="images/9.png">
+                                <span>OLED电视</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li><i><img src="images/6.png"></i><a href="">智能硬件</a>
+                    	<div class="subnva">
+                        	<a href="">
+                                <img src="images/8.png">
+                                <span>OLED电视</span>
+                            </a>
+                            <a href="">
+                                <img src="images/9.png">
+                                <span>曲面电视</span>
+                            </a>
+                            <a href="">
+                                <img src="images/10.png">
+                                <span>4k电视</span>
+                            </a>
+                           
+                            <a href="">
+                                <img src="images/12.png">
+                                <span>LED电视</span>
+                            </a>
+                            <a href="">
+                                <img src="images/9.png">
+                                <span>OLED电视</span>
+                            </a>
+                        </div>
+                    
+                    </li>
+                    <li><i><img src="images/7.png"></i><a href="">配件</a>
+                    	<div class="subnva">
+                        	<a href="">
+                                <img src="images/9.png">
+                                <span>OLED电视</span>
+                            </a>
+                            <a href="">
+                                <img src="images/9.png">
+                                <span>曲面电视</span>
+                            </a>
+                            <a href="">
+                                <img src="images/11.png">
+                                <span>4k电视</span>
+                            </a>
+                            <a href="">
+                                <img src="images/8.png">
+                                <span>智能电视</span>
+                            </a>
+                        </div>
+                    
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </div> 	
+	</div>
+    <div class="favorable margin">
+        <ul class="clear">
+            <li><a href=""><img src="images/images1.gif"></a></li>
+            <li><a href=""><img src="images/img2.png"></a></li>
+            <li><a href=""><img src="images/img3.png"></a></li>
+            <li class="last"><a href=""><img src="images/img4.png"></a></li>
+        </ul>
+    
+    </div>
+    <div class="content_ct margin">        
+        
+    	<div class="public_tit"><a href="">明星产品</a></div>
+        <div class="starProduct clear">
+        	<div class="left"><a href=""><img src="images/star1.jpg"></a></div>
+            <div class="right">
+            	<ul class="clear">
+                	<li>
+                    	<a href=""><img src="images/star2.jpg"></a></a>
+                    </li>
+                    <li>
+                    	<a href=""><img src="images/star3.jpg"></a></a>
+                    </li>
+                    <li>
+                    	<a href=""><img src="images/star4.jpg"></a></a>
+                    </li>
+                    <li>
+                    	<a href=""><img src="images/star5.jpg"></a></a>
+                    </li>
+                </ul>
+            </div>
+           
+        </div>
+        <div class="starProduct_bt">
+           		<ul class="clear">
+                	<li>
+                    	<a href=""><img src="images/star6.jpg"></a>
+                        <div class="word">
+                        	<div class="one">OLED55V91A 有机发光</div>
+                            <div class="two">43吋 LG硬屏 64位10核 HDR技术</div>
+                            <div class="price">￥8888</div>
+                        </div>
+                    </li>
+                    <li>
+                    	<a href=""><img src="images/star7.jpg"></a>
+                        <div class="word">
+                        	<div class="one">OLED55V91A 有机发光</div>
+                            <div class="two">43吋 LG硬屏 64位10核 HDR技术</div>
+                            <div class="price">￥8888</div>
+                        </div>
+                    </li>
+                    <li>
+                    	<a href=""><img src="images/star8.jpg"></a>
+                        <div class="word">
+                        	<div class="one">OLED55V91A 有机发光</div>
+                            <div class="two">43吋 LG硬屏 64位10核 HDR技术</div>
+                            <div class="price">￥8888</div>
+                        </div>
+                    </li>
+                    <li>
+                    	<a href=""><img src="images/star9.jpg"></a>
+                        <div class="word">
+                        	<div class="one">OLED55V91A 有机发光</div>
+                            <div class="two">43吋 LG硬屏 64位10核 HDR技术</div>
+                            <div class="price">￥8888</div>
+                        </div>
+                    </li>
+                    <li>
+                    	<a href=""><img src="images/star9.jpg"></a>
+                        <div class="word">
+                        	<div class="one">OLED55V91A 有机发光</div>
+                            <div class="two">43吋 LG硬屏 64位10核 HDR技术</div>
+                            <div class="price">￥8888</div>
+                        </div>
+                    </li>
+                  
+                </ul>
+           </div>
+ <!---人气热销--->
+        <div class="public_tit"><a href="">人气热销</a></div>   
+        <div class="hot">
+        	<ul class="clear">
+            	<li>
+                	<a href=""><img src="images/hot5.jpg"></a>
+                    <div class="word">
+                        	<div class="one">KKTV K43 网红爆款</div>
+                            <div class="two">43吋 LG硬屏 64位10核 HDR技术</div>
+                            <div class="price">￥8888<span>晒单有礼</span></div>
+                    </div>
+                
+                </li>
+                <li>
+                	<a href=""><img src="images/hot2.jpg"></a>
+                    <div class="word">
+                        	<div class="one">KKTV K43 网红爆款</div>
+                            <div class="two">43吋 LG硬屏 64位10核 HDR技术</div>
+                            <div class="price">￥8888<span>晒单有礼</span></div>
+                    </div>
+                
+                </li>
+                <li>
+                	<a href=""><img src="images/hot3.jpg"></a>
+                    <div class="word">
+                        	<div class="one">KKTV K43 网红爆款</div>
+                            <div class="two">43吋 LG硬屏 64位10核 HDR技术</div>
+                            <div class="price">￥8888<span>晒单有礼</span></div>
+                    </div>
+                
+                </li>
+                <li>
+                	<a href=""><img src="images/hot4.jpg"></a>
+                    <div class="word">
+                        	<div class="one">KKTV K43 网红爆款</div>
+                            <div class="two">43吋 LG硬屏 64位10核 HDR技术</div>
+                            <div class="price">￥8888<span>晒单有礼</span></div>
+                    </div>
+                
+                </li>
+                <li>
+                	<a href=""><img src="images/hot3.jpg"></a>
+                    <div class="word">
+                        	<div class="one">KKTV K43 网红爆款</div>
+                            <div class="two">43吋 LG硬屏 64位10核 HDR技术</div>
+                            <div class="price">￥8888<span>晒单有礼</span></div>
+                    </div>
+                
+                </li>
+                <li>
+                	<a href=""><img src="images/hot2.jpg"></a>
+                    <div class="word">
+                        	<div class="one">KKTV K43 网红爆款</div>
+                            <div class="two">43吋 LG硬屏 64位10核 HDR技术</div>
+                            <div class="price">￥8888<span>晒单有礼</span></div>
+                    </div>
+                
+                </li>
+                
+                <li>
+                	<a href=""><img src="images/hot1.jpg"></a>
+                    <div class="word">
+                        	<div class="one">KKTV K43 网红爆款</div>
+                            <div class="two">43吋 LG硬屏 64位10核 HDR技术</div>
+                            <div class="price">￥8888<span>晒单有礼</span></div>
+                    </div>
+                
+                </li>
+                <li>
+                	<a href=""><img src="images/hot4.jpg"></a>
+                    <div class="word">
+                        	<div class="one">KKTV K43 网红爆款</div>
+                            <div class="two">43吋 LG硬屏 64位10核 HDR技术</div>
+                            <div class="price">￥8888<span>晒单有礼</span></div>
+                    </div>
+                
+                </li>
+            </ul>
+        </div>   
+        <div class="public_tit"><a href="">活动</a></div>   
+ <!---活动--->
+        <div class="activities">
+        	<ul class="clear">
+            	<li><a href=""><img src="images/hot6.jpg"</a></li>
+                <li><a href=""><img src="images/hot7.jpg"</a></li>
+                <li><a href=""><img src="images/hot8.jpg"</a></li>
+                <li><a href=""><img src="images/hot9.jpg"</a></li>
+            </ul>
+        </div> 
+  <!---新闻中心--->
+       <div class="public_tit"><a href="">新闻中心</a></div>  
+       <div class="news clear">
+       		<div class="news_lf">
+            	<div class="news_lf_top clear">
+                	<strong><a href="">康佳多款重磅产品闪耀CES ASIA 2017</a></strong>
+                    <span>2017-6-26</span>
+                </div>
+             	<div class="more"><a href="">了解更多</a></div>
+                <ul>
+                	<li>
+                    	<a href="">康佳电视司庆期间全品牌销量第一</a>
+                        <i><a href="">2017-5-24</a></i>
+               	 	</li>
+                    <li>
+                    	<a href="">康佳推出一站式电子结算与金融服务平台——“康佳融单”</a>
+                        <i><a href="">2017-5-24</a></i>
+               	 	</li>
+                    <li>
+                    	<a href="">康佳电视司庆期间全品牌销量第一</a>
+                        <i><a href="">2017-5-24</a></i>
+               	 	</li>
+               </ul>
+            </div>
+            <div class="news_rt">
+            	 
+	   			<div id="fsDa1" class="focus">  
+                <div id="D1pica1" class="fPic">  
+                    <div class="fcon" style="display: block;">
+                        <a  href=""><img src="images/pic2.jpg"></a>                        
+                    </div>
+                    
+                    <div class="fcon" style="display:block;">
+                        <a  href=""><img src="images/pic1.jpg"></a>
+                        
+                    </div>
+                    
+                    <div class="fcon" style="display: block;">
+                        <a  href=""><img src="images/pic1.jpg"></a>
+                       
+                    </div>
+                    
+                    <div class="fcon" style="display: block;">
+                        <a  href=""><img src="images/pic2.jpg"></a>
+                        
+                    </div>    
+                </div>
+    <div class="fbg">  
+    <div class="D1fBt" id="D1fBat">  
+        <a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i>1</i></a>  
+        <a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i>2</i></a>  
+        <a href="javascript:void(0)" hidefocus="true" target="_self" class="current"><i>3</i></a>  
+        <a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i>4</i></a>  
+    </div>  
+    </div>  
+    <span class="prev"></span>   
+    <span class="next"></span>    
+</div> 
+	            <script type="text/javascript">
+            Qfast.add('widgets', { path: "js/terminator2.2.min.js", type: "js", requires: ['fx'] });  
+            Qfast(false, 'widgets', function () {
+                K.tabs({
+                    id: 'fsDa1',   //焦点图包裹id  
+                    conId: "D1pica1",  //** 大图域包裹id  
+                    tabId:"D1fBat",  
+                    tabTn:"a",
+                    conCn: '.fcon', //** 大图域配置class       
+                    auto: 1,   //自动播放 1或0
+                    effect: 'fade',   //效果配置
+                    eType: 'click', //** 鼠标事件
+                    pageBt:true,//是否有按钮切换页码
+                    bns: ['.prev', '.next'],//** 前后按钮配置class                          
+                    interval: 3000  //** 停顿时间  
+                }) 
+            })  
+        </script>
+            </div>
+       </div>            
+    </div>
+</div>
+<div class="footer margin">
+	<div class="footer_top">
+   	  <ul class="clear">
+        	<li>
+            	<img src="images/footer1.png">
+                <div class="word">
+                	<p>全场包邮</p>
+                    <p class="explain">全场商品免费送到家</p>
+                </div>
+                <span></span>
+            </li>
+        <li>
+            	<img src="images/footer1.png">
+                <div class="word">
+                	<p>全场包邮</p>
+                    <p class="explain">全场商品免费送到家</p>
+                </div>
+                <span></span>
+            </li>
+        <li>
+            	<img src="images/footer1.png">
+                <div class="word">
+                	<p>全场包邮</p>
+                    <p class="explain">全场商品免费送到家</p>
+                </div>
+                <span></span>
+            </li>
+        <li>
+            	<img src="images/footer1.png">
+                <div class="word">
+                	<p>全场包邮</p>
+                    <p class="explain">全场商品免费送到家</p>
+                </div>
+                <span></span>
+            </li>
+        <li>
+            	<img src="images/footer1.png">
+                <div class="word">
+                	<p>全场包邮</p>
+                    <p class="explain">全场商品免费送到家</p>
+                </div>
+                <span></span>
+            </li>
+      </ul>
+    </div>
+    <div class="footer_ct">
+    	<ul class="clear">
+        	<li>
+            	<h3><a href="">帮助中心</a></h3>
+                <p><a href="">购物指南</a></p>
+                <p><a href="">支付方式</a></p>
+                <p><a href="">配送方式</a></p>
+                <p><a href="">售后政策</a></p>
+                <p><a href="">防伪查询</a></p>
+            </li>
+            <li>
+            	<h3><a href="">新闻中心</a></h3>
+                <p><a href="">购物指南</a></p>
+                <p><a href="">支付方式</a></p>
+                <p><a href="">配送方式</a></p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+            </li>
+            <li>
+            	<h3><a href="">投资者关系</a></h3>
+                <p><a href="">公司概要</a></p>
+                <p><a href="">高管团队</a></p>
+                <p><a href="">股份信息</a></p>
+                <p><a href="">临时公告</a></p>
+                <p><a href="">防伪查询</a></p>
+            </li>
+            <li>
+            	<h3><a href="">集团成员网站</a></h3>
+                <p><a href="">全球服务中心</a></p>
+                <p><a href="">康佳国际营销</a></p>
+                <p><a href="">深圳康佳通讯科技</a></p>
+                <p><a href="">康佳壹视界商业显示</a></p>
+                <p><a href="">防伪查询</a></p>
+            </li>
+            <li>
+            	<h3><a href="">关于网站</a></h3>
+                <p><a href="">购物指南</a></p>
+                <p><a href="">支付方式</a></p>
+                <p><a href="">配送方式</a></p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+            </li>
+            <li>
+            	<h3><a href="">关于我们</a></h3>
+                <p><a href="">购物指南</a></p>
+                <p><a href="">支付方式</a></p>
+                <p><a href="">配送方式</a></p>
+                <p><a href="">售后政策</a></p>
+                <p><a href="">防伪查询</a></p>
+            </li>
+             <li>
+                <p>24小时全国服务热线</p>
+                <p class="tel">400-880-0016</p>
+                <div class="online">QQ在线客服</div>               
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="copyright">
+	<div class="copyright_nr margin">
+    	<div class="left"><img src="images/konka.png"/></div>
+        <div class="right">Copyright © 1980-2016 康佳集团股份有限公司 版权所有<i>|</i><span>联系我们</span><i>|</i>
+        <span>法律声明</span><i>|</i><span>隐私保护</span></div>
+    </div>
+</div>
+
+<div id="sidecolumn">
+	<span><a href="">购买咨询</a></span>
+    <span><a href="">售后服务</a></span>
+    <span id="toTop"><a href="">返回顶部</a></span>
+    
+</div>
+
+</body>
+</html>
