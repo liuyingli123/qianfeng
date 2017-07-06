@@ -1,0 +1,84 @@
+@charset "UTF-8";
+/*服务页面*/
+.service {
+  padding-top: 30px; }
+  .service li {
+    float: left;
+    width: 288px;
+    height: 300px;
+    margin-right: 12px;
+    margin-bottom: 15px;
+    background: #fff;
+    color: #666;
+    text-align: center; }
+    .service li .toppic {
+      width: 100px;
+      height: 100px;
+      margin: 40px auto 0;
+      background: url(../images/fuwu1.png) 0 0px; }
+    .service li .toppic:hover {
+      background: url(../images/fuwu1.png) 0 100px; }
+    .service li .topword {
+      margin-top: 30px; }
+      .service li .topword h3 {
+        font: 700 18px/28px "";
+        padding-bottom: 20px; }
+  .service li:hover {
+    background: #ff5d59;
+    color: #fff; }
+  .service :nth-child(2) .toppic {
+    width: 100px;
+    height: 100px;
+    margin: 40px auto 0;
+    background: url(../images/fuwu2.png) 0 0px; }
+  .service :nth-child(2) .toppic:hover {
+    width: 100px;
+    height: 100px;
+    margin: 40px auto 0;
+    background: url(../images/fuwu2.png) 0 100px; }
+  .service :nth-child(3) .toppic {
+    width: 100px;
+    height: 100px;
+    margin: 40px auto 0;
+    background: url(../images/fuwu3.png) 0 0px; }
+  .service :nth-child(3) .toppic:hover {
+    width: 100px;
+    height: 100px;
+    margin: 40px auto 0;
+    background: url(../images/fuwu3.png) 0 100px; }
+  .service :nth-child(4) .toppic {
+    width: 100px;
+    height: 100px;
+    margin: 40px auto 0;
+    background: url(../images/fuwu4.png) 0 0px; }
+  .service :nth-child(4) .toppic:hover {
+    width: 100px;
+    height: 100px;
+    margin: 40px auto 0;
+    background: url(../images/fuwu4.png) 0 100px; }
+  .service :nth-child(6) .toppic {
+    width: 100px;
+    height: 100px;
+    margin: 40px auto 0;
+    background: url(../images/fuwu4.png) 0 0px; }
+  .service :nth-child(6) .toppic:hover {
+    width: 100px;
+    height: 100px;
+    margin: 40px auto 0;
+    background: url(../images/fuwu4.png) 0 100px; }
+  .service :nth-child(8) .toppic {
+    width: 100px;
+    height: 100px;
+    margin: 40px auto 0;
+    background: url(../images/fuwu3.png) 0 0px; }
+  .service :nth-child(8) .toppic:hover {
+    width: 100px;
+    height: 100px;
+    margin: 40px auto 0;
+    background: url(../images/fuwu3.png) 0 100px; }
+
+.conent .buying .banner {
+  height: 460px;
+  background: url(../images/buy.png) no-repeat center top; }
+
+/*# sourceMappingURL=style1.css.map */
