@@ -1,0 +1,345 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>嘉丽专柜</title>
+<link href="css/public.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/my.js"></script>
+
+</head>
+<body>
+<!---顶部--->
+<div class="top">
+	<div class="margin">
+    	<div class="top_left">
+       		<a href=""><img src="images/icon01.png"></a>
+            <a href="" class="WeChat"><img src="images/icon02.png">
+            	<div class="WeChatnr"><img src="images/pic4.jpg"></div>
+            </a>
+            <a href=""><img src="images/icon03.png"></a>
+        </div>
+        <div class="top_right">
+        	<span><img src="images/icon04.png">
+            	<div class="login_in">
+                	<div class="login_innr">
+                    	<i><a href="">用户登录</a></i>
+                        <i class="zhuce"><a href="">用户注册</a></i>
+                    </div>
+                </div>
+            </span>
+        	<a href="">关于嘉丽</a>
+            <a href="">投资者关系</a>
+            <a href="">新闻中心</a>
+            <a href="">大宗采购</a>
+            <a href="">加入嘉丽</a>
+            <a href="">联系我们</a>
+        </div>
+    </div>
+</div>
+<!---导航--->
+<div class="nav margin clear">
+	<div class="logo"><a href=""><img src="images/logo.png"/></a></div>
+    <div class="nav_ct">
+    	<ul>
+        	<li id="aa"><a href="">电视</a></li>
+            <li><a href="">手机</a></li>
+            <li><a href="">冰洗</a></li>
+            <li><a href="">生活电器</a></li>
+            <li><a href="">大宗采购</a></li>
+            <li><a href="">服务</a></li>
+            <li><a href="">社区</a></li>
+        </ul>
+    </div>
+    <div class="nav_rt clear">
+    	<input type="text" class="search" placeholder="电视"/>
+        <input class="search_btn" value="" type="submit">
+      <div class="topbar_cart">购物车 0件
+        	<div id="cartsm" class="cartsm">您购物车中有0件商品</div>
+        </div>
+    </div>
+</div>
+<!---商品列表开始--->
+<div class="conent">
+   <div class="goods margin">
+   		<!---筛选区--->
+   		<div class="goods_top">
+   			<h3 class="title clear">商品筛选<span>(共<b>92</b>件商品)</span>
+   				<a href=""><span class="screenRt">重置筛选项<i>></i></span></a>
+   			</h3>
+   			<p class="choose">您已选择：</p>
+   			<ul>
+   				<li>
+   					<span>分类：</span>
+   					<i><a href="">智能电视</a></i>
+   					<i><a href="">LED电视</a></i>
+   					<i><a href="">4K电视</a></i>
+   					<i><a href="">曲面电视</a></i>
+   					<i><a href="">olEdD电视</a></i>
+   					<i><a href="">商用电视</a></i>
+   			</li>
+   				<li>
+   					<span>品牌：</span>
+   					<i  class="unlimited"><a href="">不限</a></i>
+   					<i><a href="">现代电视</a></i>
+   					<i><a href="">KONKA康佳</a></i>
+   					<i><a href="">咪咕康佳MIGU KONKA</a></i>   					
+   				</li>
+   				<li>
+   					<span>品牌：</span>
+   					<i  class="unlimited"><a href="">不限</a></i>
+   					<i><a href="">现代电视</a></i>
+   					<i><a href="">KONKA康佳</a></i>
+   					<i><a href="">KKTV</a></i>   					
+   				</li>
+   				<li>
+   					<span>价格：</span>
+   					<i  class="unlimited"><a href="">不限</a></i>
+   					<i><a href="">1-1999元</a></i>
+   					<i><a href="">2000-3999元</a></i>
+   					<i><a href="">4000-5999元</a></i>   					
+   				</li>
+   				<li>
+   					<span>观看距离：</span>
+   					<i  class="unlimited"><a href="">不限</a></i>
+   					<i><a href="">1.5米-2米</a></i>
+   					<i><a href="">2米-2.5米</a></i>
+   					<i><a href="">2米-2.5米</a></i>
+   					<i><a href="">3.5米以上</a></i>   					
+   				</li>
+   				<li>
+   					<span>屏幕尺寸：</span>
+   					<i  class="unlimited"><a href="">不限</a></i>
+   					<i><a href="">24-32英寸</a></i>
+   					<i><a href="">39-43英寸</a></i>
+   					<i><a href="">48-50英寸</a></i> 
+   					<i><a href="">55-58英寸</a></i>
+   					<i><a href="">60-65英寸</a></i>
+   					<i><a href="">70-75英寸</a></i>   					
+   				</li>
+   				<li>
+   					<span>延保：</span>
+   					<i  class="unlimited"><a href="">不限</a></i>
+   					<i><a href="">一年延保</a></i>
+   					<i><a href="">两年延保</a></i>   								
+   				</li>
+   			</ul>
+   		<!---排序状态--->
+   			<div class="orderStatus">
+   				<div class="moren"><span>默认</span><span>价格</span><span>销量</span></div>
+   				<div class="bigpic"><span>大图</span><span>列表</span><span><input type="checkbox">仅显示有货</span></div>
+   				<div class="screenct">筛选：<input type="checkbox">送赠品<input type="checkbox">流行热卖<input type="checkbox">送新品</div>
+   				<div class="rtPage">123</div>
+   			
+   			</div>
+   		</div>
+  		<div class="good_list id="btn1">
+  			<ul class="clear">
+  				<li>
+  					<a href=""><img src="images/goods1.jpg"></a>
+  					<div class="goods_info">
+  						<h3 class="goods_name">
+  							<a href="">LED65X81S</a>
+  						</h3>
+  						<p class="parameter">65吋 语音智控 安卓智能 4K超高清</p>
+  						<b class="price">￥8999.00</b>
+  					</div>
+  				</li>
+  				<li>
+  					<a href=""><img src="images/goods1.jpg"></a>
+  					<div class="goods_info">
+  						<h3 class="goods_name">
+  							<a href="">LED65X81S</a>
+  						</h3>
+  						<p class="parameter">65吋 语音智控 安卓智能 4K超高清</p>
+  						<b class="price">￥8999.00</b>
+  					</div>
+  				</li>
+  				<li>
+  					<a href=""><img src="images/goods1.jpg"></a>
+  					<div class="goods_info">
+  						<h3 class="goods_name">
+  							<a href="">LED65X81S</a>
+  						</h3>
+  						<p class="parameter">65吋 语音智控 安卓智能 4K超高清</p>
+  						<b class="price">￥8999.00</b>
+  					</div>
+  				</li>
+  				<li>
+  					<a href=""><img src="images/goods1.jpg"></a>
+  					<div class="goods_info">
+  						<h3 class="goods_name">
+  							<a href="">LED65X81S</a>
+  						</h3>
+  						<p class="parameter">65吋 语音智控 安卓智能 4K超高清</p>
+  						<b class="price">￥8999.00</b>
+  					</div>
+  				</li>
+  				<li>
+  					<a href=""><img src="images/goods1.jpg"></a>
+  					<div class="goods_info">
+  						<h3 class="goods_name">
+  							<a href="">LED65X81S</a>
+  						</h3>
+  						<p class="parameter">65吋 语音智控 安卓智能 4K超高清</p>
+  						<b class="price">￥8999.00</b>
+  					</div>
+  				</li>
+  				<li>
+  					<a href=""><img src="images/goods1.jpg"></a>
+  					<div class="goods_info">
+  						<h3 class="goods_name">
+  							<a href="">LED65X81S</a>
+  						</h3>
+  						<p class="parameter">65吋 语音智控 安卓智能 4K超高清</p>
+  						<b class="price">￥8999.00</b>
+  					</div>
+  				</li>
+  				<li>
+  					<a href=""><img src="images/goods1.jpg"></a>
+  					<div class="goods_info">
+  						<h3 class="goods_name">
+  							<a href="">LED65X81S</a>
+  						</h3>
+  						<p class="parameter">65吋 语音智控 安卓智能 4K超高清</p>
+  						<b class="price">￥8999.00</b>
+  					</div>
+  				</li>
+  				<li>
+  					<a href=""><img src="images/goods1.jpg"></a>
+  					<div class="goods_info">
+  						<h3 class="goods_name">
+  							<a href="">LED65X81S</a>
+  						</h3>
+  						<p class="parameter">65吋 语音智控 安卓智能 4K超高清</p>
+  						<b class="price">￥8999.00</b>
+  					</div>
+  				</li>
+  			</ul>
+  		</div>
+   </div> 
+    
+    
+</div>
+<div class="footer margin">
+	<div class="footer_top">
+   	  <ul class="clear">
+        	<li>
+            	<img src="images/footer1.png">
+                <div class="word">
+                	<p>全场包邮</p>
+                    <p class="explain">全场商品免费送到家</p>
+                </div>
+                <span></span>
+            </li>
+        <li>
+            	<img src="images/footer1.png">
+                <div class="word">
+                	<p>全场包邮</p>
+                    <p class="explain">全场商品免费送到家</p>
+                </div>
+                <span></span>
+            </li>
+        <li>
+            	<img src="images/footer1.png">
+                <div class="word">
+                	<p>全场包邮</p>
+                    <p class="explain">全场商品免费送到家</p>
+                </div>
+                <span></span>
+            </li>
+        <li>
+            	<img src="images/footer1.png">
+                <div class="word">
+                	<p>全场包邮</p>
+                    <p class="explain">全场商品免费送到家</p>
+                </div>
+                <span></span>
+            </li>
+        <li>
+            	<img src="images/footer1.png">
+                <div class="word">
+                	<p>全场包邮</p>
+                    <p class="explain">全场商品免费送到家</p>
+                </div>
+                <span></span>
+            </li>
+      </ul>
+    </div>
+    <div class="footer_ct">
+    	<ul class="clear">
+        	<li>
+            	<h3><a href="">帮助中心</a></h3>
+                <p><a href="">购物指南</a></p>
+                <p><a href="">支付方式</a></p>
+                <p><a href="">配送方式</a></p>
+                <p><a href="">售后政策</a></p>
+                <p><a href="">防伪查询</a></p>
+            </li>
+            <li>
+            	<h3><a href="">新闻中心</a></h3>
+                <p><a href="">购物指南</a></p>
+                <p><a href="">支付方式</a></p>
+                <p><a href="">配送方式</a></p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+            </li>
+            <li>
+            	<h3><a href="">投资者关系</a></h3>
+                <p><a href="">公司概要</a></p>
+                <p><a href="">高管团队</a></p>
+                <p><a href="">股份信息</a></p>
+                <p><a href="">临时公告</a></p>
+                <p><a href="">防伪查询</a></p>
+            </li>
+            <li>
+            	<h3><a href="">集团成员网站</a></h3>
+                <p><a href="">全球服务中心</a></p>
+                <p><a href="">康佳国际营销</a></p>
+                <p><a href="">深圳康佳通讯科技</a></p>
+                <p><a href="">康佳壹视界商业显示</a></p>
+                <p><a href="">防伪查询</a></p>
+            </li>
+            <li>
+            	<h3><a href="">关于网站</a></h3>
+                <p><a href="">购物指南</a></p>
+                <p><a href="">支付方式</a></p>
+                <p><a href="">配送方式</a></p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+            </li>
+            <li>
+            	<h3><a href="">关于我们</a></h3>
+                <p><a href="">购物指南</a></p>
+                <p><a href="">支付方式</a></p>
+                <p><a href="">配送方式</a></p>
+                <p><a href="">售后政策</a></p>
+                <p><a href="">防伪查询</a></p>
+            </li>
+             <li>
+                <p>24小时全国服务热线</p>
+                <p class="tel">400-880-0016</p>
+                <div class="online">QQ在线客服</div>               
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="copyright">
+	<div class="copyright_nr margin">
+    	<div class="left"><img src="images/konka.png"/></div>
+        <div class="right">Copyright © 1980-2016 康佳集团股份有限公司 版权所有<i>|</i><span>联系我们</span><i>|</i>
+        	<span>法律声明</span><i>|</i><span>隐私保护</span>
+        </div>
+    </div>
+</div>
+
+<div id="sidecolumn">
+	<span><a href="">购买咨询</a></span>
+    <span><a href="">售后服务</a></span>
+    <span id="toTop"><a href="">返回顶部</a></span>    
+</div>
+
+</body>
+
+</html>

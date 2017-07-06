@@ -1,0 +1,278 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>嘉丽专柜</title>
+<link href="css/public.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/my.js"></script>
+<script type="text/javascript">
+	window.onload=function(){
+		function $(id){
+			return document.getElementById(id);
+		}
+		function $create(tagName){
+			return document.createElement(tagName);
+		}
+		//用户名验证
+		$("user").onblur=function(){
+			let str=$("user").value;
+			let reg=/^\w+@\w+(\.\w+)+$/;
+			let reg1=/^1\d{10}$/;
+			if((reg.test(str))||(reg1.test(str))){
+				alert("输入符合要求");				
+			}
+			else{
+					alert("亲，请重新输入");
+			}				
+		}
+		//密码由6-20个英文字母数字组成
+		$("mima").onblur = function(){
+			var x = ceshi(/^[0-9a-zA-Z_]\w{5,19}$/,$("mima").value);
+			if(x){
+			
+			}else{
+				alert("请检查您的密码");
+			}
+		};
+		
+		//确认密码
+		$("mima1").onblur = function(){
+			if($("mima").value!==$("mima1").value){
+				alert("请核对您两次输入的密码是否一致");
+			}else{
+				
+			}
+		};
+		
+		//验证码
+		$("btn1").onclick = function(){//字母、数字组合验证码
+			var num;
+			var str="";
+			while(true){
+				num = parseInt(Math.random()*123);
+				if(num>=65 && num<=90){
+					str += String.fromCharCode(num);
+				}
+				if(num>=97 && num<=122){
+					str += String.fromCharCode(num);
+				}
+				if(num>=0 && num<=9){
+					str += num.toString();
+				}
+				if(str.length>=4){
+					break;
+				}
+			}
+			$("showCode").innerHTML=str;
+		};
+		
+		 login2.onclick=function(){
+		 	
+		 	if($("user").value && $("mima").value && $("mima1").value ){
+			location.href="index.html";
+			
+			}else{
+			alert("请完善您的信息");
+		
+			}
+		 	
+		 };		
+		
+	};
+</script>
+</head>
+<body>
+<!---顶部--->
+<div class="top">
+	<div class="margin">
+    	<div class="top_left">
+       		<a href=""><img src="images/icon01.png"></a>
+            <a href="" class="WeChat"><img src="images/icon02.png">
+            	<div class="WeChatnr"><img src="images/pic4.jpg"></div>
+            </a>
+            <a href=""><img src="images/icon03.png"></a>
+        </div>
+        <div class="top_right">
+        	<span><img src="images/icon04.png">
+            	<div class="login_in">
+                	<div class="login_innr">
+                    	<i><a href="">用户登录</a></i>
+                        <i class="zhuce"><a href="">用户注册</a></i>
+                    </div>
+                </div>
+            </span>
+        	<a href="">关于嘉丽</a>
+            <a href="">投资者关系</a>
+            <a href="">新闻中心</a>
+            <a href="">大宗采购</a>
+            <a href="">加入嘉丽</a>
+            <a href="">联系我们</a>
+        </div>
+    </div>
+</div>
+<!---导航--->
+<div class="nav margin clear">
+	<div class="logo"><a href=""><img src="images/logo.png"/></a></div>
+    <div class="nav_ct">
+    	<ul>
+        	<li><a href="">电视</a></li>
+            <li><a href="">手机</a></li>
+            <li><a href="">冰洗</a></li>
+            <li><a href="">生活电器</a></li>
+            <li><a href="">大宗采购</a></li>
+            <li><a href="">服务</a></li>
+            <li><a href="">社区</a></li>
+        </ul>
+    </div>
+    <div class="nav_rt clear">
+    	<input type="text" class="search" placeholder="电视"/>
+        <input class="search_btn" value="" type="submit">
+      <div class="topbar_cart">购物车 0件
+        	<div id="cartsm" class="cartsm">您购物车中有0件商品</div>
+        </div>
+    </div>
+</div>
+<!---注册--->
+<div class="conent">
+   <div class="registration margin clear">
+   		<div class="left">
+        	<h3>用户注册</h3>
+        	<p>
+           		<span><i>*</i>注册账号：</span><input type="text" id="user"required="required" placeholder="用户名/邮箱/手机号,最少四个字符"/>
+            </p>
+            <p><span><i>*</i>密码：</span><input type="password" id="mima" required placeholder="6-20个字符"/></p>
+            <p><span><i>*</i>确认密码：</span><input type="password" id="mima1" required placeholder="再次填写密码"/></p>
+            <p><span><i>*</i>验证码：</span><input type="text" required/><b id="showCode"></b>
+            <input type="button" value="看不清换一张" id="btn1"/></p>
+            <h4><span>&nbsp;&nbsp;</span><input type="checkbox" />&nbsp;我已阅读并同意<em>会员注册协议</em>和<em>隐私保护政策<em></h3>
+            <p><span>&nbsp;&nbsp;</span><button  type="submit" id="login2" onclick="login2()">注册</button></p>
+        </div>
+        <div class="right">
+        	<p><span>已经有会员账号请直接登录</span><button>转到登录页</button></p>        	
+        </div>
+   </div> 
+    
+    
+</div>
+<div class="footer margin">
+	<div class="footer_top">
+   	  <ul class="clear">
+        	<li>
+            	<img src="images/footer1.png">
+                <div class="word">
+                	<p>全场包邮</p>
+                    <p class="explain">全场商品免费送到家</p>
+                </div>
+                <span></span>
+            </li>
+        <li>
+            	<img src="images/footer1.png">
+                <div class="word">
+                	<p>全场包邮</p>
+                    <p class="explain">全场商品免费送到家</p>
+                </div>
+                <span></span>
+            </li>
+        <li>
+            	<img src="images/footer1.png">
+                <div class="word">
+                	<p>全场包邮</p>
+                    <p class="explain">全场商品免费送到家</p>
+                </div>
+                <span></span>
+            </li>
+        <li>
+            	<img src="images/footer1.png">
+                <div class="word">
+                	<p>全场包邮</p>
+                    <p class="explain">全场商品免费送到家</p>
+                </div>
+                <span></span>
+            </li>
+        <li>
+            	<img src="images/footer1.png">
+                <div class="word">
+                	<p>全场包邮</p>
+                    <p class="explain">全场商品免费送到家</p>
+                </div>
+                <span></span>
+            </li>
+      </ul>
+    </div>
+    <div class="footer_ct">
+    	<ul class="clear">
+        	<li>
+            	<h3><a href="">帮助中心</a></h3>
+                <p><a href="">购物指南</a></p>
+                <p><a href="">支付方式</a></p>
+                <p><a href="">配送方式</a></p>
+                <p><a href="">售后政策</a></p>
+                <p><a href="">防伪查询</a></p>
+            </li>
+            <li>
+            	<h3><a href="">新闻中心</a></h3>
+                <p><a href="">购物指南</a></p>
+                <p><a href="">支付方式</a></p>
+                <p><a href="">配送方式</a></p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+            </li>
+            <li>
+            	<h3><a href="">投资者关系</a></h3>
+                <p><a href="">公司概要</a></p>
+                <p><a href="">高管团队</a></p>
+                <p><a href="">股份信息</a></p>
+                <p><a href="">临时公告</a></p>
+                <p><a href="">防伪查询</a></p>
+            </li>
+            <li>
+            	<h3><a href="">集团成员网站</a></h3>
+                <p><a href="">全球服务中心</a></p>
+                <p><a href="">康佳国际营销</a></p>
+                <p><a href="">深圳康佳通讯科技</a></p>
+                <p><a href="">康佳壹视界商业显示</a></p>
+                <p><a href="">防伪查询</a></p>
+            </li>
+            <li>
+            	<h3><a href="">关于网站</a></h3>
+                <p><a href="">购物指南</a></p>
+                <p><a href="">支付方式</a></p>
+                <p><a href="">配送方式</a></p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+            </li>
+            <li>
+            	<h3><a href="">关于我们</a></h3>
+                <p><a href="">购物指南</a></p>
+                <p><a href="">支付方式</a></p>
+                <p><a href="">配送方式</a></p>
+                <p><a href="">售后政策</a></p>
+                <p><a href="">防伪查询</a></p>
+            </li>
+             <li>
+                <p>24小时全国服务热线</p>
+                <p class="tel">400-880-0016</p>
+                <div class="online">QQ在线客服</div>               
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="copyright">
+	<div class="copyright_nr margin">
+    	<div class="left"><img src="images/konka.png"/></div>
+        <div class="right">Copyright © 1980-2016 康佳集团股份有限公司 版权所有<i>|</i><span>联系我们</span><i>|</i>
+        	<span>法律声明</span><i>|</i><span>隐私保护</span>
+        </div>
+    </div>
+</div>
+
+<div id="sidecolumn">
+	<span><a href="">购买咨询</a></span>
+    <span><a href="">售后服务</a></span>
+    <span id="toTop"><a href="">返回顶部</a></span>    
+</div>
+
+</body>
+</html>
