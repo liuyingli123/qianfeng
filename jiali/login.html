@@ -5,53 +5,6 @@
 <title>嘉丽专柜</title>
 <link href="css/public.css" rel="stylesheet" type="text/css">
 <link href="css/style.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
-<script type="text/javascript" src="js/my.js"></script>
-<script type="text/javascript">
-	window.onload=function(){
-		function $(id){
-			return document.getElementById(id);
-		}
-		function $create(tagName){
-			return document.createElement(tagName);
-		}
-		//用户名验证
-		$("user").onblur=function(){
-			let str=$("user").value;
-			let reg=/^\w+@\w+(\.\w+)+$/;
-			let reg1=/^1\d{10}$/;
-			if((reg.test(str))||(reg1.test(str))){
-				alert("输入符合要求");				
-			}
-			else{
-					alert("亲，请重新输入");
-			}				
-		}
-		//密码验证
-		$("paswd").onblur=function(){
-				var reg=/^[a-zA-Z_]\w{5,19}$/
-				var str=$("paswd").value;
-				if(reg.test(str)){
-					alert("输入符合要求");
-				}else{
-					alert("亲，请重新输入");
-				}			
-			};
-		
-		//登录按钮
-		 login1.onclick=function(){
-	
-			if($("user").value && $("mima").value && $("paswd").value ){
-				location.href="index.html";
-				
-			}else{
-				alert("请完善您的信息");
-			
-			}	
-		}
-		
-	}
-</script>
 </head>
 <body>
 <a name="#top"></a>
@@ -113,13 +66,13 @@
         <div class="right">
         	<h3>用户登录</h3>
             <div class="right_nr">
-            		<form action="http://" method="post">
-                    <input type="text" id="user" placeholder="用户名/邮箱地址/手机号" required="required"/>
-                    <input type="text" placeholder="填写密码" id="paswd" required="required"/>
-                   <input type="checkbox" name="name1">&nbsp;&nbsp;记住账号
-                   <input type="checkbox" name="name1">&nbsp;&nbsp;两周内自动登录
-                   <p><button  type="submit" id="login1" />登录</button><a href="">忘记密码</a></p>
-                   <div class="huiyuan clear">还是会员? <a href="">免费注册</a></div>
+            		<form action="loginCheck.php" method="post">
+                    <P></P><input type="text" id="userId"   placeholder="用户名/邮箱地址/手机号" /><span id="usts"></span></P>
+                    <P><input type="text" placeholder="填写密码"  id="passId"/><span id="mmts"></span></P>
+                   <input type="checkbox">&nbsp;&nbsp;记住账号
+                   <input type="checkbox">&nbsp;&nbsp;两周内自动登录
+                   <p><button  type="submit" id="login1" />登录</button><a href="">忘记密码</a><span id="dengluts"></span></p>
+                   <div class="huiyuan clear">还是会员? <a href="">免费注册</a></div><span id="errmsg"></span>
                    </form>
             </div>
              
@@ -249,3 +202,32 @@
 
 </body>
 </html>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+<script type="text/javascript" src="js/cookieTools1702.js"></script>
+<script type="text/javascript">
+jQuery("#login1").click(function(){
+	jQuery.ajax({
+		url:"loginCheck.php",
+		async:true,
+		data:"userName="+jQuery('#userId').val()+"&userPass="+jQuery("#passId").val(),
+		type:"post",
+		success:function(data){
+			if(data=="1"){
+				//保存cookie
+			  //saveCookie("userName",$("#userId").val(),7);				
+				location.href="index.html";
+			}else{
+				jQuery("#errmsg").html("亲，用户名或者密码错误，登录失败，请想好再输！");
+			}
+		}		
+	});	
+});
+	
+	
+	
+	
+
+	
+</script>
+
+

@@ -13,8 +13,8 @@
 		echo "注册失败:服务器连接有问题".mysql.error();
 	}else{
 		//2)、执行SQL语句
-		mysql_select_db("liuyingli",$con);		
-		$str="insert into userTable(userName,userPass) values('".$name."','".$pass."')";
+		mysql_select_db("newyl",$con);		
+		$str="insert into usersTable(userName,userPass) values('".$name."','".$pass."')";
 		$count = mysql_query($str,$con); 		
 		//3)、关闭数据库
 		mysql_close($con);		

@@ -11,6 +11,7 @@ $("#erji2").on("mouseenter", function() {
 $("#erji2").on("mouseleave", function() {
                 $(this).hide();
             });
+$('.service ul li:last-child').css('margin-right','none');
 
 /*返回顶部*/
 

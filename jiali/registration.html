@@ -5,83 +5,6 @@
 <title>嘉丽专柜</title>
 <link href="css/public.css" rel="stylesheet" type="text/css">
 <link href="css/style.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
-<script type="text/javascript" src="js/my.js"></script>
-<script type="text/javascript">
-	window.onload=function(){
-		function $(id){
-			return document.getElementById(id);
-		}
-		function $create(tagName){
-			return document.createElement(tagName);
-		}
-		//用户名验证
-		$("user").onblur=function(){
-			let str=$("user").value;
-			let reg=/^\w+@\w+(\.\w+)+$/;
-			let reg1=/^1\d{10}$/;
-			if((reg.test(str))||(reg1.test(str))){
-				alert("输入符合要求");				
-			}
-			else{
-					alert("亲，请重新输入");
-			}				
-		}
-		//密码由6-20个英文字母数字组成
-		$("mima").onblur = function(){
-			var x = ceshi(/^[0-9a-zA-Z_]\w{5,19}$/,$("mima").value);
-			if(x){
-			
-			}else{
-				alert("请检查您的密码");
-			}
-		};
-		
-		//确认密码
-		$("mima1").onblur = function(){
-			if($("mima").value!==$("mima1").value){
-				alert("请核对您两次输入的密码是否一致");
-			}else{
-				
-			}
-		};
-		
-		//验证码
-		$("btn1").onclick = function(){//字母、数字组合验证码
-			var num;
-			var str="";
-			while(true){
-				num = parseInt(Math.random()*123);
-				if(num>=65 && num<=90){
-					str += String.fromCharCode(num);
-				}
-				if(num>=97 && num<=122){
-					str += String.fromCharCode(num);
-				}
-				if(num>=0 && num<=9){
-					str += num.toString();
-				}
-				if(str.length>=4){
-					break;
-				}
-			}
-			$("showCode").innerHTML=str;
-		};
-		
-		 login2.onclick=function(){
-		 	
-		 	if($("user").value && $("mima").value && $("mima1").value ){
-			location.href="index.html";
-			
-			}else{
-			alert("请完善您的信息");
-		
-			}
-		 	
-		 };		
-		
-	};
-</script>
 </head>
 <body>
 <!---顶部--->
@@ -98,8 +21,8 @@
         	<span><img src="images/icon04.png">
             	<div class="login_in">
                 	<div class="login_innr">
-                    	<i><a href="">用户登录</a></i>
-                        <i class="zhuce"><a href="">用户注册</a></i>
+                    	<i><a href="login.html">用户登录</a></i>
+                        <i class="zhuce"><a href="registration.html">用户注册</a></i>
                     </div>
                 </div>
             </span>
@@ -138,22 +61,33 @@
 <div class="conent">
    <div class="registration margin clear">
    		<div class="left">
+   			<form action="regSave.php" method="post">
         	<h3>用户注册</h3>
         	<p>
-           		<span><i>*</i>注册账号：</span><input type="text" id="user"required="required" placeholder="用户名/邮箱/手机号,最少四个字符"/>
+           		<span><i>*</i>注册账号：</span>
+           		<input type="text" name="userName" id="user" required="required" placeholder="用户名/邮箱/手机号,最少四个字符"/>
+           		<span id="userInfo"></span>
             </p>
-            <p><span><i>*</i>密码：</span><input type="password" id="mima" required placeholder="6-20个字符"/></p>
-            <p><span><i>*</i>确认密码：</span><input type="password" id="mima1" required placeholder="再次填写密码"/></p>
+            <p>
+            	<span><i>*</i>密码：</span>
+            	<input type="password" id="mima" name="userPass" required="required" placeholder="6-20个字符"/>
+            	<span id="passtishi"></span>
+            </p>
+            <p>
+            	<span><i>*</i>确认密码：</span>
+            	<input type="password" id="mima1" required="required" placeholder="再次填写密码"/>
+            	<span id="queren"></span>
+            </p>
             <p><span><i>*</i>验证码：</span><input type="text" required/><b id="showCode"></b>
             <input type="button" value="看不清换一张" id="btn1"/></p>
             <h4><span>&nbsp;&nbsp;</span><input type="checkbox" />&nbsp;我已阅读并同意<em>会员注册协议</em>和<em>隐私保护政策<em></h3>
-            <p><span>&nbsp;&nbsp;</span><button  type="submit" id="login2" onclick="login2()">注册</button></p>
+            <p><span>&nbsp;&nbsp;</span><button  type="submit" id="login2">注册</button><span id="zhucets"></span></p>
         </div>
         <div class="right">
         	<p><span>已经有会员账号请直接登录</span><button>转到登录页</button></p>        	
         </div>
+        </form>
    </div> 
-    
     
 </div>
 <div class="footer margin">
@@ -276,3 +210,101 @@
 
 </body>
 </html>
+
+<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+<script type="text/javascript">
+jQuery(function(){
+	jQuery("#user").blur(function(){
+		let str=jQuery(this).val();
+		let reg=/^\w+@\w+(\.\w+)+$/;
+		let reg1=/^1\d{10}$/;
+		if((reg.test(str))||(reg1.test(str))){
+			jQuery.ajax({
+			url:"checkUser.php",
+			async:true,
+			data:"userName="+this.value,
+			type:"get",
+			success:function(data){
+				if(data=="1"){
+				jQuery("#userInfo").html("该用户已经被注册了");			   
+				//console.log("该用户已经被注册了")
+				}else{
+				jQuery("#userInfo").html("该用户没有人使用");
+				//console.log("该用户没有人使用")
+				}
+			}
+			
+		});						
+	}
+		else{
+			jQuery("#userInfo").html("请重新输入");
+		}				
+	
+	});	
+	
+});
+	
+</script>
+<script type="text/javascript">
+
+	window.onload=function(){
+		var num1=true;
+		function $(id){
+			return document.getElementById(id);
+		}		
+		//密码由6-20个英文字母数字组成
+		$("mima").onblur = function(){			
+			var reg = /^[0-9a-zA-Z_]\w{5,19}$/;
+		    var str = $("mima").value;			
+			if(reg.test(str)){
+				$("passtishi").innerHTML="输入符合要求";
+				num1 =true;
+			}else{
+				$("passtishi").innerHTML="请检查您的密码";
+				num1=false;
+			}
+		};
+		
+		//确认密码
+		$("mima1").onblur = function(){
+			if($("mima").value!==$("mima1").value){
+				$("queren").innerHTML="请核对密码是否一致";
+				num1 =true;
+			}else{
+				$("queren").innerHTML="输入符合要求";
+				num1 =false;
+			}
+		};
+		
+		//验证码
+		$("btn1").onclick = function(){//字母、数字组合验证码
+			var num;
+			var str="";
+			while(true){
+				num = parseInt(Math.random()*123);
+				if(num>=65 && num<=90){
+					str += String.fromCharCode(num);
+				}
+				if(num>=97 && num<=122){
+					str += String.fromCharCode(num);
+				}
+				if(num>=0 && num<=9){
+					str += num.toString();
+				}
+				if(str.length>=4){
+					break;
+				}
+			}
+			$("showCode").innerHTML=str;
+		};		
+		 $("login2").onclick=function(){		 	
+		 	if(num1=true){	
+		 		location.href="login.html";
+			}else{
+			 $("zhucets").innerHTML="注册失败"	;
+			}
+		 	
+		 };		
+		
+	};
+</script>
