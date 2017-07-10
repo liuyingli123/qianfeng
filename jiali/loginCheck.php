@@ -14,11 +14,9 @@
 		$result = mysql_query($str,$con); 
 		$rowCount = mysql_num_rows($result);			
 		//3)、关闭数据库
-		mysql_close($con);
-		
+		mysql_close($con);		
 		//3、响应根据查询结果给前端响应对应的（1：用户名和密码都正确，表示登录成功，0：用户名或者密码有误，登录失败）
-		echo $rowCount;
-				
+		echo $rowCount;				
 	}
 	
 ?>
